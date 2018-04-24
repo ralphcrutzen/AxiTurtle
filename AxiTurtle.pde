@@ -28,8 +28,8 @@
     turnTo(angle);         // t()
     
     // Angles for turn commands are 0.0 to 1.0
-    turnRight(1/4);        // Turn right 90º
-    turnLeft(1/360);       // Turn left 1º
+    turnRight(0.25);        // Turn right 90º
+    turnLeft(1/360.0);       // Turn left 1º
     
     // SVG move (pen not drawing) and line (drawing)
     // Relative
