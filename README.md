@@ -50,7 +50,7 @@ turnRight(1/4); // Turn right 90º
 turnLeft(1/360); // Turn left 1º
 ```
 
-## move (pen not drawing) and line (drawing)
+## Move (pen not drawing) and line (drawing)
 ### Relative
 ```java
 moveBy(x, y); 
