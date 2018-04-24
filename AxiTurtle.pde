@@ -48,32 +48,40 @@
 */
 
 void setup() {
+  // Don't change the following 2 lines of code:
   size(800, 631, P2D); // moved from AxiGen1 file. size() must be used in setup().
   setupAxiGen(); // call original setup() function in AxiGen1 file.
   
-  moveTo(200,150);
+  // Your code starts here:
+  
+  // Example: Koch snowflake fractal 
+  moveTo(200, 150);
   penDown();
   for (int i=0; i<3; i++) {
     koch(4, 400);
-    r(1/3.0);
-  } 
+    turnRight(1/3.0);
+  }
+  moveTo(0, 0);
 }
 
 void draw() {
+  //Don't change the following line of code:
   drawAxiGen(); // call original draw() function in AxiGen1 file.
+  
+  // Your code starts here:
 }
 
 void koch(int level, float side) {
   if (level > 0) {
     koch(level-1, side/3.0);
-    l(1/6.0);
+    turnLeft(1/6.0);
     koch(level-1, side/3.0);
-    r(1/3.0);
+    turnRight(1/3.0);
     koch(level-1, side/3.0);
-    l(1/6.0);
+    turnLeft(1/6.0);
     koch(level-1, side/3.0);
   }
   else {
-    f(side);
+    moveForward(side);
   }
 }  
