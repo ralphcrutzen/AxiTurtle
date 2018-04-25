@@ -91,9 +91,11 @@ void scanSerial()
 
       j = 0;
       while (j < PortCount) {
-        str2 = Serial.list()[j].substring(0, 11);
-        if (str1.equals(str2) == true)
-          OpenPortList =  append(OpenPortList, j);
+        if (Serial.list()[j].length() > 11) {
+          str2 = Serial.list()[j].substring(0, 11);
+          if (str1.equals(str2) == true)
+            OpenPortList =  append(OpenPortList, j);
+        }
         j++;
       }
     }
